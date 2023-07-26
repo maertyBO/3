@@ -1,0 +1,16 @@
+#include <iostream>
+#include <algorithm>
+
+int main() {
+    char alphabet[] = {'c', 'a', 'b', 'e', 'd', 'g', 'f'};
+    int size = sizeof(alphabet) / sizeof(alphabet[0]);
+
+    std::sort(alphabet, alphabet + size, std::greater<char>());
+
+    for (int i = 0; i < size; i++) {
+        std::cout << alphabet[i] << " ";
+    }
+    // Output: g f e d c b a
+
+    return 0;
+}
